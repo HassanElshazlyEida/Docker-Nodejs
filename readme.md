@@ -46,7 +46,7 @@ Description: This command displays the logs of a specific Docker container.
 Parameters:
 - `name`: The name or container ID of the Docker container whose logs you want to view.
 
-## `docker run --name container-name -v $(pwd):/app -v /app/node_modules -d -p 3001:3001 name`
+## `docker run --name container-name -v $(pwd):/app -v /app/node_modules --env-file ./.env -d -p 3001:3001 name`
 
 Description: This command runs a Docker container with anonymous and named volumes, binding the current host directory to the /app directory in the container, and excluding the /app/node_modules directory from the binding. The container is detached and mapped to port 3001.
 
@@ -60,3 +60,4 @@ Parameters:
 - `-d`: Runs the container in detached mode (background).
 - `-v, --volume`: Bind mount a volume from the host to the container.
 - `-v /app/node_modules`: This part creates an anonymous volume for the /app/node_modules directory inside the container. It prevents the /app/node_modules directory from being overwritten by the mounted volume from the host. This is commonly done to improve performance and avoid conflicts with host system dependencies.
+- `--env-file ./.env`: This parameter specifies the path to the .env file on the host, which contains environment variable assignments. These variables will be loaded into the container, and your application can access them as if they were set directly within the container's environment.
