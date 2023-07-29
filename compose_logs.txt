@@ -1,0 +1,59 @@
+#1 [node-app internal] load .dockerignore
+#1 transferring context: 119B done
+#1 DONE 0.0s
+
+#2 [node-app internal] load build definition from Dockerfile
+#2 transferring dockerfile: 370B done
+#2 DONE 0.0s
+
+#3 [node-app internal] load metadata for docker.io/library/node:14
+#3 ...
+
+#4 [node-app auth] library/node:pull token for registry-1.docker.io
+#4 DONE 0.0s
+
+#3 [node-app internal] load metadata for docker.io/library/node:14
+#3 DONE 2.1s
+
+#5 [node-app base 1/1] FROM docker.io/library/node:14@sha256:a158d3b9b4e3fa813fa6c8c590b8f0a860e015ad4e59bbce5744d2f6fd8461aa
+#5 DONE 0.0s
+
+#6 [node-app internal] load build context
+#6 transferring context: 46.83kB 0.0s done
+#6 DONE 0.0s
+
+#7 [node-app development 1/4] WORKDIR /app
+#7 CACHED
+
+#8 [node-app development 2/4] COPY package.json .
+#8 DONE 0.0s
+
+#9 [node-app development 3/4] RUN npm install
+#9 6.030 npm notice created a lockfile as package-lock.json. You should commit this file.
+#9 6.036 npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@~2.3.2 (node_modules/chokidar/node_modules/fsevents):
+#9 6.036 npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@2.3.2: wanted {"os":"darwin","arch":"any"} (current: {"os":"linux","arch":"arm64"})
+#9 6.042 npm WARN docker-nodejs@1.0.0 No description
+#9 6.048 npm WARN The package express is included as both a dev and production dependency.
+#9 6.049 
+#9 6.050 added 90 packages from 66 contributors and audited 91 packages in 5.369s
+#9 6.072 
+#9 6.072 11 packages are looking for funding
+#9 6.072   run `npm fund` for details
+#9 6.072 
+#9 6.073 found 1 moderate severity vulnerability
+#9 6.073   run `npm audit fix` to fix them, or `npm audit` for details
+#9 DONE 6.1s
+
+#10 [node-app development 4/4] COPY . .
+#10 DONE 0.0s
+
+#11 [node-app] exporting to image
+#11 exporting layers
+#11 exporting layers 0.2s done
+#11 writing image sha256:a58c40806e049480c0fc4c7733ea223a7c61406d2fe6655d3faf4ed6c27e0bc8 done
+#11 naming to docker.io/library/docker-nodejs-node-app done
+#11 DONE 0.2s
+ Container express-node-app-container  Recreate
+ Container express-node-app-container  Recreated
+ Container express-node-app-container  Starting
+ Container express-node-app-container  Started

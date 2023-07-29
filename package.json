@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/HassanElshazlyEida/Docker-Nodejs#readme",
   "devDependencies": {
+    "express": "^4.18.2",
     "nodemon": "^2.0.16"
   },
   "dependencies": {
