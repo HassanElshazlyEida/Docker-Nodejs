@@ -1,6 +1,6 @@
 # Docker Commands Cheat Sheet
 
-**`docker ps`**
+**`docker ps -a`**
 
 Description: Displays a list of running containers.
 
@@ -87,3 +87,11 @@ Parameters:
 - `--build`: Build images before starting containers.
 - `2>&1`: Redirect both standard error (2) and standard output (1) to the same output stream.
 - `| tee compose_logs.txt`: Pipe the output of the `docker-compose` command to the `tee` command, which saves the output to a file named `compose_logs.txt` and also displays it in the terminal.
+
+
+**`docker image ls`  /  `docker volume ls`**
+   - Description: These commands list all available Docker images or volumes on your system, respectively.
+   - Output: Running the respective command will display a list of all Docker images or volumes, showing details like repository, tag, image ID, and volume name.
+
+**`docker image prune`  /  `docker volume prune`**
+   - Description: These commands are used to clean up unused or dangling Docker images or volumes to free up disk space.
