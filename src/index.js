@@ -39,7 +39,7 @@ app.listen(PORT, () => console.log("Running .. "));
 
 app.get("/",(req,res)=>{
     client.set("products","product 1");
-    res.send("<h1> Hello form the other side 23 .. </h1>");
+    res.send("<h1> Hello form Docker Hub </h1>");
 });  
 app.get("/products",async (req,res)=>{
     const products = await client.get("products");
