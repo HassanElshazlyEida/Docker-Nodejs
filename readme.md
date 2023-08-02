@@ -95,3 +95,17 @@ Parameters:
 
 **`docker image prune`  /  `docker volume prune`**
    - Description: These commands are used to clean up unused or dangling Docker images or volumes to free up disk space.
+
+**`docker run -d --name watchtower -e WATCHTOWER_TRACE=true -e WATCHTOWER_POLL_INTERVAL=30 -v /var/run/docker.sock:/var/run/docker.sock containrrr/watchtower express-node-app-container`**
+
+Description:
+This Docker command runs the Watchtower container, which monitors and updates other Docker containers with newer images when updates are available.
+
+Parameters:
+- `-d`, `--detach`: Run the container in the background.
+- `--name watchtower`: Assign the name "watchtower" to the running container.
+- `-e WATCHTOWER_TRACE=true`: Set the environment variable "WATCHTOWER_TRACE" to "true" to enable debug-level logging for Watchtower.
+- `-e WATCHTOWER_POLL_INTERVAL=30`: Set the interval (in seconds) at which Watchtower checks for updated images. In this example, Watchtower will check every 30 seconds.
+- `-v /var/run/docker.sock:/var/run/docker.sock`: Mount the Docker socket file inside the Watchtower container, allowing it to communicate with the Docker engine and monitor other containers.
+- `containrrr/watchtower`: The Docker image name for Watchtower.
+- `express-node-app-container`: The name of the container you want Watchtower to monitor and update with newer images.
